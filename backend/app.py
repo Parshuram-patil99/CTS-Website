@@ -14,8 +14,11 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
-# Initialize DB tables on startup
-init_db()
+# Initialize DB tables on startup safely
+try:
+    init_db()
+except Exception as e:
+    print(f"[DB Startup Warning] Could not run init_db on startup: {e}")
 
 def db_execute(query_pg, query_sqlite, params=()):
     """Executes an INSERT / UPDATE statement against PostgreSQL or SQLite."""

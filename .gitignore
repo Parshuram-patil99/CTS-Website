@@ -1,0 +1,17 @@
+# Environment variables
+.env
+*.env
+
+# Python cache & bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Databases
+*.db
+database.db
+
+# Dependencies
+node_modules/
+dist/
+build/

@@ -22,6 +22,8 @@ def get_db_engine():
     try:
         import psycopg2
         if database_url:
+            if database_url.startswith("postgres://"):
+                database_url = database_url.replace("postgres://", "postgresql://", 1)
             conn = psycopg2.connect(database_url)
         else:
             conn = psycopg2.connect(
@@ -37,6 +39,7 @@ def get_db_engine():
         conn = sqlite3.connect(DB_PATH)
         conn.row_factory = sqlite3.Row
         return conn, "sqlite"
+
 
 def init_db():
     conn, engine_type = get_db_engine()
