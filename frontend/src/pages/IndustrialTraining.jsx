@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GraduationCap, Award, BookOpen, Clock, CheckCircle, Send, AlertCircle, Sparkles } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 import './IndustrialTraining.css';
 
 export default function IndustrialTraining() {
@@ -26,7 +27,8 @@ export default function IndustrialTraining() {
     setStatusMsg(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/register-student', {
+      const response = await fetch(`${API_BASE_URL}/api/register-student`, {
+
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

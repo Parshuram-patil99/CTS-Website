@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Database, Inbox, UserCheck, Briefcase, RefreshCw, Lock, KeyRound, LogOut, ShieldCheck, Eye, EyeOff } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 import Logo from '../components/Logo';
 import './AdminDashboard.css';
+
 
 export default function AdminDashboard() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -47,7 +49,7 @@ export default function AdminDashboard() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:5000/api/admin/submissions');
+      const response = await fetch(`${API_BASE_URL}/api/admin/submissions`);
       if (!response.ok) {
         throw new Error('Failed to fetch admin data from backend');
       }
@@ -59,8 +61,9 @@ export default function AdminDashboard() {
       });
     } catch (err) {
       console.error(err);
-      setError('Unable to fetch submissions. Ensure Python Flask server is running at http://localhost:5000');
-    } finally {
+      setError(`Unable to fetch submissions. Ensure backend server is running at ${API_BASE_URL}`);
+    }
+ finally {
       setLoading(false);
     }
   };

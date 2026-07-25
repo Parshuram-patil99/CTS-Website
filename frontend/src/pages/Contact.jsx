@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Globe, Send, CheckCircle, AlertCircle, MessageCircle } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 import './Contact.css';
 
 export default function Contact() {
@@ -24,7 +25,8 @@ export default function Contact() {
     setStatusMsg(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/enquiry', {
+      const response = await fetch(`${API_BASE_URL}/api/enquiry`, {
+
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)

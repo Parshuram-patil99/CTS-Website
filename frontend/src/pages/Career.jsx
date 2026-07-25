@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Briefcase, MapPin, Clock, Send, CheckCircle, AlertCircle, Sparkles } from 'lucide-react';
+import { API_BASE_URL } from '../config';
 import './Career.css';
 
 export default function Career() {
@@ -26,7 +27,8 @@ export default function Career() {
     setStatusMsg(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/apply-job', {
+      const response = await fetch(`${API_BASE_URL}/api/apply-job`, {
+
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
