@@ -1,0 +1,88 @@
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+.prod-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(0, 102, 204, 0.1);
+  color: var(--accent-blue);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+}
+
+.prod-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.prod-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--gradient-hero);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prod-header h2 {
+  font-size: 1.5rem;
+}
+
+.prod-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.prod-highlights {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.prod-highlights h4 {
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.prod-highlights ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.prod-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--text-dark);
+}
+
+.h-check {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.prod-action {
+  display: flex;
+  justify-content: flex-end;
+}

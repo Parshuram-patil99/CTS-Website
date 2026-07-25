@@ -1,0 +1,150 @@
+.page-header {
+  background: var(--gradient-hero);
+  color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  color: #ffffff;
+  font-size: 2.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--light-blue);
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.left-align::after {
+  margin: 0.75rem 0 0 0 !important;
+}
+
+.lead-paragraph {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.corporate-details-box {
+  background: #f1f5f9;
+  border-left: 4px solid var(--accent-blue);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-sm);
+  margin-top: 1.5rem;
+}
+
+.corporate-details-box h4 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-dark);
+}
+
+.corporate-details-box p {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+
+}
+
+.visual-card-deck {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.deck-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.deck-card.accent {
+  background: var(--gradient-blue);
+  color: #ffffff;
+}
+
+.deck-card.accent h3, .deck-card.accent p {
+  color: #ffffff;
+}
+
+.deck-icon {
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+}
+
+.deck-card.accent .deck-icon {
+  color: #ffffff;
+}
+
+.section-bg-alt {
+  background-color: #f8fafc;
+}
+
+.pillar-detail-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.pillar-detail-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-blue);
+  box-shadow: var(--shadow-md);
+}
+
+.icon-wrap {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 102, 204, 0.1);
+  color: var(--accent-blue);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.pillar-detail-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.pillar-detail-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.vision-box-lg, .mission-box-lg {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: var(--radius-md);
+}
+
+.vm-lg-icon {
+  color: var(--light-blue);
+  margin-bottom: 1rem;
+}
+
+.vision-box-lg h2, .mission-box-lg h2 {
+  color: #ffffff;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.vision-box-lg p, .mission-box-lg p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
